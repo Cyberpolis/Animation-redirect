@@ -1,0 +1,123 @@
+* {margin:0;padding:0;box-sizing:border-box;}
+body {background:#000;font-family:'Inter',sans-serif;color:white;overflow:hidden;}
+#container {position:fixed;top:0;left:0;width:100%;height:100%;}
+.input-container {position:fixed;bottom:2rem;left:50%;transform:translateX(-50%);z-index:10;width:90%;max-width:600px;}
+.input-wrapper {background:rgba(255,255,255,0.1);backdrop-filter:blur(10px);border:1px solid rgba(255,255,255,0.2);border-radius:16px;padding:0.5rem;display:flex;gap:0.5rem;align-items:center;}
+input {flex:1;background:transparent;border:none;padding:1rem 1.25rem;color:white;font-size:1rem;font-weight:500;}
+input:focus{outline:none;}
+#displayName {color:white;font-weight:600;font-size:1rem;}
+
+.send-button {
+    background: rgba(255,255,255,0.15);
+    border: none;
+    padding: 0.8rem 1rem;
+    border-radius: 12px;
+    cursor: pointer;
+    color: white;
+    font-size: 1.2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 0.2s ease;
+}
+
+.send-button:hover {
+    background: rgba(255,255,255,0.25);
+    transform: translateY(-2px);
+}
+
+.send-button:active {
+    transform: scale(0.92);
+    background: rgba(255,255,255,0.3);
+}
+
+/* ================================================================= */
+/*                          ریسپانسیو جدید                            */
+/* ================================================================= */
+
+/* دستگاه‌های خیلی بزرگ (مانیتورهای بزرگ) */
+@media (min-width: 1400px) {
+    input {
+        font-size: 1.2rem;
+        padding: 1.2rem 1.4rem;
+    }
+    .send-button {
+        padding: 1rem 1.25rem;
+        font-size: 1.4rem;
+    }
+    .input-container {
+        bottom: 3rem;
+        max-width: 700px;
+    }
+}
+
+/* دسکتاپ استاندارد */
+@media (min-width: 1024px) and (max-width: 1399px) {
+    .input-container {
+        bottom: 2.5rem;
+        max-width: 600px;
+    }
+}
+
+/* تبلت‌ها */
+@media (min-width: 600px) and (max-width: 1023px) {
+    .input-container {
+        bottom: 2rem;
+    }
+    input {
+        font-size: 1rem;
+        padding: 0.9rem 1rem;
+    }
+    .send-button {
+        padding: 0.75rem 0.9rem;
+        font-size: 1.1rem;
+    }
+}
+
+/* موبایل */
+@media (max-width: 599px) {
+
+    /* کوچیک کردن باکس برای فضای موبایل */
+    .input-container {
+        bottom: 1.5rem;
+        width: 92%;
+    }
+
+    .input-wrapper {
+        padding: 0.4rem;
+        border-radius: 14px;
+        gap: 0.4rem;
+    }
+
+    input {
+        font-size: 0.9rem;
+        padding: 0.75rem 1rem;
+    }
+
+    #displayName {
+        font-size: 0.9rem;
+    }
+
+    .send-button {
+        padding: 0.65rem 0.85rem;
+        font-size: 1rem;
+        border-radius: 10px;
+    }
+}
+
+/* موبایل‌های کوچک‌تر از 350px */
+@media (max-width: 350px) {
+    input {
+        font-size: 0.8rem;
+        padding: 0.6rem 0.7rem;
+    }
+    
+    .send-button {
+        padding: 0.55rem 0.7rem;
+        font-size: 0.9rem;
+    }
+
+    .input-container {
+        width: 95%;
+    }
+}

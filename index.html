@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Particle Morph Navigation</title>
+<link rel="stylesheet" href="style.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.1/gsap.min.js"></script>
+</head>
+<body>
+
+<div id="container"></div>
+
+<div class="input-container">
+    <div class="input-wrapper">
+
+        <!-- ======= کد اصلی بدون تغییر ======= -->
+        <input type="text" id="siteInput" placeholder="Type site name..." maxlength="20">
+        <span id="displayName"></span>
+
+        <!-- ======= دکمه فلش اضافه شده قبلی ======= -->
+        <button id="sendBtn" class="send-button">
+            ➤
+        </button>
+        <!-- ==================================== -->
+
+    </div>
+</div>
+
+<!-- ========== بخش جدید برای ریسپانسیو (اضافه شده) ========== -->
+<div id="deviceDetector"></div>
+<!-- ========================================================= -->
+
+<script src="script.js"></script>
+</body>
+</html>
